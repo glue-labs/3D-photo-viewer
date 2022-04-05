@@ -17,10 +17,21 @@ export const useLoginHook = () => {
     },
     [dispatch, history]
   );
-
+  console.log(userName);
   const logoutUserHandler = useCallback(() => {
     dispatch(logoutUser({ history }));
   }, [dispatch, history]);
 
-  return { userLoginRequestHandler, logoutUserHandler, userName, loginSpinner };
+  return {
+    userLoginRequestHandler,
+    logoutUserHandler,
+    userName:
+      userName && userName.length > 0
+        ? userName
+        : JSON.parse(localStorage.getItem("my-web-app-tokens") as string)
+        ? JSON.parse(localStorage.getItem("my-web-app-tokens") as string)
+            .userName
+        : "",
+    loginSpinner,
+  };
 };
