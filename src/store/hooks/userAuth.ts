@@ -17,7 +17,7 @@ export const useLoginHook = () => {
     },
     [dispatch, history]
   );
-  console.log(userName);
+
   const logoutUserHandler = useCallback(() => {
     dispatch(logoutUser({ history }));
   }, [dispatch, history]);
