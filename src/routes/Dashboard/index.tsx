@@ -3,10 +3,9 @@ import { Viewer } from "photo-sphere-viewer";
 import "photo-sphere-viewer/dist/photo-sphere-viewer.css";
 
 import "./style.css";
-import { useLoginHook } from "../../store/hooks/userAuth";
+import Header from "../../components/Header";
 
 const Dashboard = () => {
-  const { logoutUserHandler, userName } = useLoginHook();
   const [image, setImage] = useState(undefined as any);
   const [viewerInfo, setViewerInfo] = useState(undefined as any);
 
@@ -39,10 +38,7 @@ const Dashboard = () => {
 
   return (
     <Fragment>
-      <div className="header">
-        <div>Hi, {userName} </div>
-        <button onClick={logoutUserHandler}>Sign Out</button>
-      </div>
+      <Header />
       <div className="container">
         Upload a panorama image here
         <input
@@ -52,7 +48,12 @@ const Dashboard = () => {
         />
         <div
           id="viewer"
-          style={{ width: "90vw", height: "70vh", border: "solid 1px black" }}
+          style={{
+            width: "60vw",
+            height: "50vh",
+            border: "solid 1px black",
+            borderRadius: "15px",
+          }}
         ></div>
       </div>
     </Fragment>

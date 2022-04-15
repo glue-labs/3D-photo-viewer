@@ -1,25 +1,31 @@
 import { useState } from "react";
+import Header from "../../components/Header";
 import { useCarDamageDetectionHook } from "../../store/hooks/carDamageDetection";
 
 const CarDamageDetection = () => {
   const [inputUrl, setInputUrl] = useState("");
-  const { checkingCarDamagedAreasHandler, outputUrl, resultSpinner } = useCarDamageDetectionHook();
+  const { checkingCarDamagedAreasHandler, outputUrl, resultSpinner } =
+    useCarDamageDetectionHook();
 
   console.log(outputUrl);
   return (
     <div>
+      <Header />
       <div>Enter your file Url</div>
       <input
         value={inputUrl}
         onChange={(event) => setInputUrl(event.target.value)}
       />
-      <button onClick={() => checkingCarDamagedAreasHandler({ image: inputUrl, draw_result: true })}>
+      <button
+        onClick={() =>
+          checkingCarDamagedAreasHandler({ image: inputUrl, draw_result: true })
+        }
+      >
         {resultSpinner ? "Analysing" : "Submit"}
       </button>
-      {
-      !resultSpinner && outputUrl &&
-      <img src={outputUrl} alt="Car overview"></img>
-      }
+      {!resultSpinner && outputUrl && (
+        <img src={outputUrl} alt="Car overview"></img>
+      )}
     </div>
   );
 };
