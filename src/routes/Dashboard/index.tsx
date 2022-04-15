@@ -39,11 +39,12 @@ const Dashboard = () => {
   return (
     <Fragment>
       <Header />
-      <div className="container">
+      <div className="container-dashboard">
         Upload a panorama image here
         <input
           type="file"
           accept="image/*"
+          className="file-input"
           onChange={(e) => handleOnImageUpload(e)}
         />
         <div

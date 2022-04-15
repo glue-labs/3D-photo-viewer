@@ -4,14 +4,16 @@ interface CustomInputProps {
   className?: string;
   placeholder?: string;
   type?: string;
+  accept?: string;
 }
 
 const CustomInput = (props: CustomInputProps) => {
-  const { type, value, className, placeholder, handleOnChange } = props;
+  const { type, value, accept, className, placeholder, handleOnChange } = props;
   return (
     <input
       type={type}
       value={value}
+      accept={accept}
       className={className}
       placeholder={placeholder}
       onChange={(e: any) => handleOnChange(e.target.value)}
