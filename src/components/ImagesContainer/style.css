@@ -1,0 +1,19 @@
+.out-test-images {
+  display: flex;
+  flex-direction: column;
+}
+
+.test-images-contain {
+  width: 150px;
+  height: 150px;
+  border: solid 1px black;
+  border-radius: 15px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.test-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+}

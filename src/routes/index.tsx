@@ -11,10 +11,12 @@ import Login from "./Login";
 import Dashboard from "./Dashboard";
 import Root from "./Root";
 import PageNotFound from "./PageNotFound";
+import CarDamageDetection from "./CarDamageDetection";
 import {
   ROOT_ROUTE,
   LOGIN_ROUTE,
   DASHBOARD_ROUTE,
+  CAR_DAMAGE_DETECTION,
 } from "../utils/routeConstants";
 import { isTokensPresentLocalStorage } from "../utils/tokenHelpers";
 
@@ -42,6 +44,12 @@ const routesConfig = {
   home: {
     path: DASHBOARD_ROUTE,
     component: Dashboard,
+    exact: true,
+    privateRoute: true,
+  },
+  carDamageDetection: {
+    path: CAR_DAMAGE_DETECTION,
+    component: CarDamageDetection,
     exact: true,
     privateRoute: true,
   },

@@ -1,0 +1,23 @@
+.result-img-contain {
+  width: 600px;
+  height: 500px;
+  border-radius: 15px;
+  border: solid 1px black;
+  margin-left: 50px;
+}
+.result-img {
+  width: 600px;
+  height: 500px;
+  border-radius: 15px;
+}
+.images-selection-display {
+  display: flex;
+  margin-top: 30px;
+}
+.image-url-input-section {
+  margin-left: 10px;
+}
+.image-url-input {
+  height: 35px;
+  margin-right: 20px;
+}

@@ -1,0 +1,9 @@
+.container-dashboard {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.file-input {
+  margin-top: 12px;
+}

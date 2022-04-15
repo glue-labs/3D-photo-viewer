@@ -1,0 +1,14 @@
+.header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.route {
+  padding: 7px;
+  text-decoration: none;
+  color: black;
+  margin: 3px;
+  background-color: antiquewhite;
+  border-radius: 15px;
+}

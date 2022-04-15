@@ -44,3 +44,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+### Car damage detection
+DEMO urls that can be used
+1. `https://fifodemopublic.s3.ap-south-1.amazonaws.com/11.jpg`
+2. `https://jixjiastorage.blob.core.windows.net/public/sensor-ai/vehicle_damage/sample.jpg` (this will work for sure others have some intermitted issues)
+3. `https://fifodemopublic.s3.ap-south-1.amazonaws.com/download+(4).jpeg`
